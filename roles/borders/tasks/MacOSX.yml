@@ -8,6 +8,7 @@
   community.general.homebrew:
     name: borders
     state: present
+  when: not ansible_check_mode
 
 - name: "{{ role_name }} | macOS | Create borders config directory"
   ansible.builtin.file:
