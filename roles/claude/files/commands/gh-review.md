@@ -26,7 +26,7 @@ specific, actionable feedback.
 
 ```bash
 /gh-review 42
-/gh-review TechDufus/dotfiles#100
+/gh-review jody-mccormick/dotfiles#100
 /gh-review "org/repo#123"
 /gh-review https://github.com/org/repo/pull/123
 ```
