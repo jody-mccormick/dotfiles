@@ -8,7 +8,7 @@
 - name: "SSH | Deploy SSH keys from Vault"
   when: op_installed
   ansible.builtin.include_tasks: ssh_keys.yml
-  with_items: "{{ op.ssh.github.techdufus }}"
+  with_items: "{{ op.ssh.github.personal }}"
 
 # - name: Copy config
 #   ansible.builtin.template:

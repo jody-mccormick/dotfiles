@@ -188,20 +188,20 @@ op:
 ##### op.ssh
 `op.ssh` stores references to ssh keys that will be deployed to your local `~/.ssh` directory.
 
-###### op.ssh.github.techdufus
+###### op.ssh.github.personal
 This variable stores a list of items containing `name:<string> vault_path:<string>`. This list will be looped over and the accompanying ssh pub/private keys will be created with the `name` value you provide.
 
 EXAMPLE: If `name: dufus` is provided, it will extract the values from the `vault_path` and create the `~/.ssh/dufus.pub` and `~/ssh/dufus` ssh keys.
 
 > [!NOTE]
-> This variable can be called anything. Currently it is called `techdufus` just for my brain to know these are associated with my `techdufus` github user account. But if you were in multiple github orgs/users and you wanted a key associated ONLY with your account for that org/user, you would create another `op.ssh.github.some_org_user_here` and list your keys in that var, promoting organizational awareness at a glance of the config.
+> This variable can be called anything. Here it's named `personal` to indicate keys for your personal GitHub account. If you work across multiple orgs/users and want keys scoped per account, create additional groups like `op.ssh.github.some_org_user_here` and list their keys, promoting organizational awareness at a glance of the config.
 
-Example `op.ssh.github.techdufus` config:
+Example `op.ssh.github.personal` config:
 ```yaml
 op:
   ssh:
     github:
-      techdufus:
+      personal:
         - name: github_key
           vault_path: "op://Personal/github_key SSH"
 ```
@@ -231,7 +231,7 @@ op:
       email: "op://Personal/Github/email"
   ssh:
     github:
-      techdufus:
+      personal:
         - name: github_key
           vault_path: "op://Personal/github_key SSH"
   system:

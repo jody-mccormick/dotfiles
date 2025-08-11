@@ -2,8 +2,8 @@ FROM ubuntu:22.04
 
 LABEL maintainer="Jody McCormick <jody.mccormick@outlook.com>"
 
-ARG USER=techdufus
-ARG group=techdufus
+ARG USER=jody
+ARG group=jody
 ARG uid=1000
 ARG DEBIAN_FRONTEND=noninteractive
 
