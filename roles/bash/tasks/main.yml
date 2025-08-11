@@ -25,8 +25,9 @@
         - "Bash | Cleanup oh-my-bash install script"
 
     - name: "Bash | Run the install script"
-      ansible.builtin.script:
-        cmd: /{{ ansible_user_dir }}/oh-my-bash.install.sh
+      ansible.builtin.command:
+        cmd: "{{ ansible_user_dir }}/oh-my-bash.install.sh"
+        creates: "{{ ansible_user_dir }}/.oh-my-bash"
 
 - name: "Bash | Copy .bashrc"
   ansible.builtin.copy:
