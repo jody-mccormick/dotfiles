@@ -82,7 +82,6 @@ function cleanup() {
 trap cleanup EXIT INT TERM
 
 # Paths
-VAULT_SECRET_FILE="$HOME/.ansible-vault/vault.secret"
 OP_INSTALLED=false
 OP_AUTHENTICATED=false
 OP_VAULT_SECRET=""
@@ -527,7 +526,6 @@ update_ansible_galaxy $ID
 
 # confirmVaultAccess
 
-rm -f $VAULT_SECRET_FILE
 _task_done
 ansible-playbook "$DOTFILES_DIR/main.yml" "${REMAINING_ARGS[@]}"
 
