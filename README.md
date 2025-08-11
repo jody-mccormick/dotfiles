@@ -21,6 +21,7 @@ Credit: This fork derives from the excellent work by [TechDufus](https://github.
 - [🔧 Setup](#setup)
 - [📖 Usage](#usage)
 - [📚 Documentation](#documentation)
+- [🙏 Credits & Inspiration](#-credits--inspiration)
 - [⭐ Star History](#-star-history)
 
 ## 📋 Prerequisites
@@ -300,6 +301,22 @@ dotfiles -t ne<tab>
 - [📖 Complete Beginner Guide](docs/QUICKSTART.md) - Step-by-step setup for new users
 - [🔧 Troubleshooting Guide](docs/TROUBLESHOOTING.md) - Common issues and solutions
 - [📋 Configuration Examples](docs/EXAMPLES.md) - Sample setups for different use cases
+
+## 🙏 Credits & Inspiration
+
+This project stands on the shoulders of excellent prior work. Major inspiration and code lineage come from:
+
+- TechDufus dotfiles: https://github.com/TechDufus/dotfiles
+- ALT-F4-LLC dotfiles: https://github.com/ALT-F4-LLC/dotfiles
+
+Notable changes in this fork include:
+
+- Rebranded repository, documentation, and install scripts for personal use.
+- Migrated the Neovim Lua namespace from `techdufus` to a generic `dotfiles` namespace with backward-compatible shims.
+- Parameterized external repo URLs (e.g., Obsidian role) for easier overrides.
+- Generalized Ansible variables and secrets handling (1Password-centric), avoiding checked-in secrets.
+
+Respect and thanks to the original authors and contributors.
 
 ## 🌟 Star History
 
