@@ -1,7 +1,38 @@
--- Adapter for telescope pickers under generic 'dotfiles' namespace
-local M = require('techdufus.telescope.pickers')
+local M = {}
+local builtin = require('telescope.builtin')
 
--- Ensure both namespaces resolve to the same module
-package.loaded['dotfiles.telescope.pickers'] = M
+M.project_files = function()
+  builtin.find_files({
+    prompt_title = 'Project Files',
+    find_command = {
+      'rg',
+      '--files',
+      '--hidden',
+      '-g',
+      '!.git'
+    }
+  })
+end
+
+M.dotfiles = function()
+  builtin.find_files({
+    prompt_title = 'Dotfiles',
+    find_command = {
+      'rg',
+      '--files',
+      '--hidden',
+      '-g',
+      '!.git'
+    },
+    cwd = '~/.dotfiles'
+  })
+end
+
+M.project_history = function()
+  builtin.oldfiles({
+    prompt_title = 'Project History',
+    cwd_only = true,
+  })
+end
 
 return M

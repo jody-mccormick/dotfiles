@@ -1,13 +1,6 @@
--- Generic namespace adapter to existing modules
--- This module provides a stable 'dotfiles' namespace while reusing the
--- existing implementation under 'techdufus'.
+ConfigMode = "rich" -- changes the config to suit either a full nerdfont/truecolor setup, or a simple 8 color tty ('rich' or 'simple')
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
 
-local M = require('techdufus')
-
--- Preload common submodules so `require('dotfiles.*')` resolves correctly.
-package.loaded['dotfiles'] = M
-package.loaded['dotfiles.core'] = require('techdufus.core')
-package.loaded['dotfiles.core.icons'] = require('techdufus.core.icons')
-package.loaded['dotfiles.core.utils'] = require('techdufus.core.utils')
-
-return M
+require('dotfiles.core')
