@@ -1,24 +1,16 @@
 
-
-![dotfiles-logo](https://github.com/TechDufus/dotfiles/assets/46715299/6c1d626d-28d2-41e3-bde5-981d9bf93462)
+# Jody McCormick Dotfiles
 <p align="center">
-    <a href="https://github.com/TechDufus/dotfiles/actions/workflows/ansible-lint.yml"><img align="center" src="https://github.com/TechDufus/dotfiles/actions/workflows/ansible-lint.yml/badge.svg"/></a>
-    <a href="https://github.com/TechDufus/dotfiles/issues"><img align="center" src="https://img.shields.io/github/issues/techdufus/dotfiles"/></a>
-    <a href="https://github.com/sponsors/TechDufus"><img align="center" src="https://img.shields.io/github/sponsors/techdufus"/></a>
-    <a href="https://discord.gg/5M4hjfyRBj"><img align="center" src="https://img.shields.io/discord/905178979844116520.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2"/></a>
-    <a href="https://github.com/TechDufus/dotfiles/commits/main"><img align="center" src="https://img.shields.io/github/commit-activity/m/techdufus/dotfiles" alt="commit frequency"></a>
+    <a href="https://github.com/jody-mccormick/dotfiles/issues"><img align="center" src="https://img.shields.io/github/issues/jody-mccormick/dotfiles"/></a>
+    <a href="https://github.com/jody-mccormick/dotfiles/commits/main"><img align="center" src="https://img.shields.io/github/commit-activity/m/jody-mccormick/dotfiles" alt="commit frequency"></a>
 </p>
 
 ---
-Fully automated development environment for [TechDufus](https://www.twitch.tv/TechDufus) on Twitch.
+Fully automated development environment for Jody McCormick.
 
-You can watch a quick 'tour' (pre-1Password integration) here on YouTube:
+You can customize, extend, and run these dotfiles across supported OSes using the included bootstrap script.
 
-<a href="https://youtu.be/hPPIScBt4Gw">
-    <img src="https://github.com/TechDufus/dotfiles/assets/46715299/b114ea0c-b67b-437b-87d3-7c7732aeccf8" alt="Automating your Dotfiles with Ansible: A Showcase" style="width:60%;"/>
-</a>
-
-This repo is heavily influenced by [ALT-F4-LLC](https://github.com/ALT-F4-LLC/dotfiles)'s repo. Go check it out!
+Credit: This fork derives from the excellent work by [TechDufus](https://github.com/TechDufus/dotfiles) and is also influenced by [ALT-F4-LLC](https://github.com/ALT-F4-LLC/dotfiles). 
 
 ## 📋 Table of Contents
 
@@ -50,7 +42,7 @@ No prerequisites needed - the bootstrap script handles everything automatically.
 **Want it fast?** Run this one command (5-10 minutes):
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/TechDufus/dotfiles/main/bin/dotfiles)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/jody-mccormick/dotfiles/main/bin/dotfiles)"
 ```
 
 **What happens:**
@@ -262,12 +254,12 @@ This shell script is also used to initialize your environment after bootstrappin
 > You must follow required steps before running this command or things may become unusable until fixed.
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/TechDufus/dotfiles/main/bin/dotfiles)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/jody-mccormick/dotfiles/main/bin/dotfiles)"
 ```
 
 If you want to run only a specific role, you can specify the following bash command:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/TechDufus/dotfiles/main/bin/dotfiles | bash -s -- --tags comma,seperated,tags
+curl -fsSL https://raw.githubusercontent.com/jody-mccormick/dotfiles/main/bin/dotfiles | bash -s -- --tags comma,seperated,tags
 ```
 
 ### Update
@@ -311,10 +303,10 @@ dotfiles -t ne<tab>
 
 ## 🌟 Star History
 
-<a href="https://github.com/techdufus/dotfiles/stargazers" target="_blank" style="display: block" align="center">
+<a href="https://github.com/jody-mccormick/dotfiles/stargazers" target="_blank" style="display: block" align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=techdufus/dotfiles&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=techdufus/dotfiles&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=techdufus/dotfiles&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=jody-mccormick/dotfiles&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=jody-mccormick/dotfiles&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=jody-mccormick/dotfiles&type=Date" />
   </picture>
 </a>

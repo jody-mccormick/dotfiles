@@ -234,7 +234,7 @@ default_roles:
   # Browser tools
   - brave        # Privacy browser
 
-git_user_name: "TechDufus"
+git_user_name: "Your Name"
 
 # Full Helm setup
 helm:
@@ -435,4 +435,4 @@ dotfiles -t new-role
 
 ---
 
-**Want to contribute an example?** [Open a pull request](https://github.com/TechDufus/dotfiles/pulls) with your configuration!
+**Want to contribute an example?** [Open a pull request](https://github.com/jody-mccormick/dotfiles/pulls) with your configuration!

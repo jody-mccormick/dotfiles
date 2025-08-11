@@ -271,7 +271,7 @@ df -h
 
 ### Create a Bug Report
 
-If you're still stuck, [create an issue](https://github.com/TechDufus/dotfiles/issues/new) with:
+If you're still stuck, [create an issue](https://github.com/jody-mccormick/dotfiles/issues/new) with:
 
 1. **Operating System**: `uname -a` output
 2. **Error message**: Copy the exact error
@@ -281,7 +281,7 @@ If you're still stuck, [create an issue](https://github.com/TechDufus/dotfiles/i
 ### Community Support
 
 - 💬 **Discord**: [Join our community](https://discord.gg/5M4hjfyRBj)
-- 🐛 **Issues**: [Report bugs](https://github.com/TechDufus/dotfiles/issues)
+- 🐛 **Issues**: [Report bugs](https://github.com/jody-mccormick/dotfiles/issues)
 
 ## 🔄 Recovery Options
 
@@ -297,7 +297,7 @@ cp ~/.dotfiles/group_vars/all.yml ~/all.yml.backup
 rm -rf ~/.dotfiles
 
 # Re-run installation
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/TechDufus/dotfiles/main/bin/dotfiles)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/jody-mccormick/dotfiles/main/bin/dotfiles)"
 
 # Restore your config
 cp ~/all.yml.backup ~/.dotfiles/group_vars/all.yml
@@ -321,4 +321,4 @@ dotfiles
 
 ---
 
-**Still having issues?** Don't hesitate to [ask for help](https://github.com/TechDufus/dotfiles/issues/new) - we're here to help!
+**Still having issues?** Don't hesitate to [ask for help](https://github.com/jody-mccormick/dotfiles/issues/new) - we're here to help!

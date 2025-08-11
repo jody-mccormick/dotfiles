@@ -68,7 +68,7 @@ Make sure you have a stable internet connection - we'll be downloading lots of t
 Now for the magic! One command installs everything:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/TechDufus/dotfiles/main/bin/dotfiles)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/jody-mccormick/dotfiles/main/bin/dotfiles)"
 ```
 
 ### What You'll See
@@ -90,7 +90,7 @@ The script will show progress like this:
 ### If Something Goes Wrong
 
 - **Script stops with an error?** → See our [Troubleshooting Guide](TROUBLESHOOTING.md)
-- **Need help?** → Join our [Discord](https://discord.gg/5M4hjfyRBj) or [create an issue](https://github.com/TechDufus/dotfiles/issues)
+- **Need help?** → Join our [Discord](https://discord.gg/5M4hjfyRBj) or [create an issue](https://github.com/jody-mccormick/dotfiles/issues)
 
 ## ⚙️ Step 3: Basic Configuration (2-3 minutes)
 
@@ -162,9 +162,9 @@ dotfiles --check
 ### Get Help
 
 - 💬 **Discord**: [Join our community](https://discord.gg/5M4hjfyRBj)
-- 🐛 **Issues**: [Report problems](https://github.com/TechDufus/dotfiles/issues)
+- 🐛 **Issues**: [Report problems](https://github.com/jody-mccormick/dotfiles/issues)
 - 📖 **Docs**: [Full documentation](../README.md)
 
 ---
 
-**Questions about this guide?** Please [open an issue](https://github.com/TechDufus/dotfiles/issues) - we'd love to improve it!
+**Questions about this guide?** Please [open an issue](https://github.com/jody-mccormick/dotfiles/issues) - we'd love to improve it!
