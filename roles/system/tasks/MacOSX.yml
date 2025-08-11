@@ -17,3 +17,4 @@
     dest: /private/etc/sudoers.d/{{ ansible_env['USER'] }}
     mode: "0440"
   become: true
+  when: not ansible_check_mode
