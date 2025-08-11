@@ -11,3 +11,4 @@
     name: "{{ host_user }}"
     shell: /opt/homebrew/bin/zsh
   become: true
+  when: not ansible_check_mode
