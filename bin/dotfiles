@@ -547,6 +547,14 @@ update_ansible_galaxy $ID
 # confirmVaultAccess
 
 _task_done
+ 
+# Configure callback plugin to log changes
+export ANSIBLE_CALLBACK_PLUGINS="$DOTFILES_DIR/callback_plugins"
+# Prefer new env var; fall back for older Ansible if present
+export ANSIBLE_CALLBACKS_ENABLED="change_logger"
+# Optional output path override; default to ~/.dotfiles.changes.json
+export DOTFILES_CHANGE_LOG="${DOTFILES_CHANGE_LOG:-$HOME/.dotfiles.changes.json}"
+
 ansible-playbook "$DOTFILES_DIR/main.yml" "${REMAINING_ARGS[@]}"
 
 popd 2>&1 > /dev/null
