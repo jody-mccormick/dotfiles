@@ -4,9 +4,22 @@
     name: gh
     state: present
 
+- name: "GH | MacOSX | Check if gh is authenticated"
+  ansible.builtin.command:
+    cmd: gh auth status
+  register: gh_auth_status
+  changed_when: false
+  failed_when: false
+
 - name: "GH | MacOSX | Install gh-dash"
   ansible.builtin.command:
     cmd: gh extension install dlvhdr/gh-dash
   register: gh_dash_install
+  when: gh_auth_status.rc == 0
   changed_when: "'already installed' not in gh_dash_install.stdout | default('')"
   failed_when: "gh_dash_install.rc != 0 and 'already installed' not in gh_dash_install.stderr | default('')"
+
+- name: "GH | MacOSX | Skip gh-dash install - not authenticated"
+  ansible.builtin.debug:
+    msg: "GitHub CLI not authenticated. Run 'gh auth login' or set GH_TOKEN, then re-run dotfiles to install gh-dash."
+  when: gh_auth_status.rc != 0

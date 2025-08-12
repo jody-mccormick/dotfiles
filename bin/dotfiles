@@ -87,7 +87,25 @@ OP_AUTHENTICATED=false
 OP_VAULT_SECRET=""
 ID=""
 DOTFILES_LOG="$HOME/.dotfiles.log"
-DOTFILES_DIR="$HOME/.dotfiles"
+# Determine DOTFILES_DIR with precedence:
+# 1) Respect env DOTFILES_DIR if set
+# 2) If running inside a git repo that contains main.yml, use repo root
+# 3) If current directory contains main.yml, use current dir
+# 4) Fallback to ~/.dotfiles
+if [[ -z "${DOTFILES_DIR:-}" ]]; then
+  if git rev-parse --show-toplevel >/dev/null 2>&1; then
+    REPO_ROOT="$(git rev-parse --show-toplevel 2>/dev/null)"
+    if [[ -f "$REPO_ROOT/main.yml" ]]; then
+      DOTFILES_DIR="$REPO_ROOT"
+    else
+      DOTFILES_DIR="$HOME/.dotfiles"
+    fi
+  elif [[ -f "./main.yml" ]]; then
+    DOTFILES_DIR="$(pwd)"
+  else
+    DOTFILES_DIR="$HOME/.dotfiles"
+  fi
+fi
 IS_FIRST_RUN="$HOME/.dotfiles_run"
 # Spinner PID tracking
 SPINNER_PID=""
@@ -376,13 +394,18 @@ case $dotfiles_os in
     ;;
 esac
 
-if ! [[ -d "$DOTFILES_DIR" ]]; then
-  __task "Downloading dotfiles repository (This may take a minute)"
-  _cmd "git clone --quiet https://github.com/jody-mccormick/dotfiles.git $DOTFILES_DIR"
-  _task_done
+if [[ "$DOTFILES_DIR" == "$HOME/.dotfiles" ]]; then
+  if ! [[ -d "$DOTFILES_DIR/.git" ]]; then
+    __task "Downloading dotfiles repository (This may take a minute)"
+    _cmd "git clone --quiet https://github.com/jody-mccormick/dotfiles.git $DOTFILES_DIR"
+    _task_done
+  else
+    __task "Updating dotfiles repository"
+    _cmd "git -C $DOTFILES_DIR pull --quiet"
+    _task_done
+  fi
 else
-  __task "Updating dotfiles repository"
-  _cmd "git -C $DOTFILES_DIR pull --quiet"
+  __task "Using dotfiles from working copy: $DOTFILES_DIR"
   _task_done
 fi
 

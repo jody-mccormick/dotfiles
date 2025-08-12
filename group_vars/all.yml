@@ -59,7 +59,7 @@ default_roles:
   - zoxide
   - zsh
 
-git_user_name: "Jody McCormick"
+git_user_name: "jody-mccormick"
 op:
   git:
     user:
@@ -69,9 +69,7 @@ op:
     github:
       personal:
         - name: id_ed25519
-          vault_path: "op://Personal/GitHub SSH"
-        - name: raft-infra
-          vault_path: "op://Raft/Raft-SSH"
+          vault_path: "op://Personal/GitHub SSH Key"
 # FIXME: See `system/tasks/main.yml` for how to structure this var looping.
   # system:
   #   hosts:
