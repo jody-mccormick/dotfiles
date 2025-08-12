@@ -1,6 +1,9 @@
 
 # Jody McCormick Dotfiles
 <p align="center">
+  <img src="docs/assets/banner.svg" alt="Jody McCormick Dotfiles" width="100%"/>
+</p>
+<p align="center">
     <a href="https://github.com/jody-mccormick/dotfiles/issues"><img align="center" src="https://img.shields.io/github/issues/jody-mccormick/dotfiles"/></a>
     <a href="https://github.com/jody-mccormick/dotfiles/commits/main"><img align="center" src="https://img.shields.io/github/commit-activity/m/jody-mccormick/dotfiles" alt="commit frequency"></a>
 </p>

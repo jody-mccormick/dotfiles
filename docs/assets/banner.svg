@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Jody McCormick Dotfiles">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="#0b1220"/>
+  <circle cx="1100" cy="-50" r="250" fill="url(#g)" opacity="0.25"/>
+  <circle cx="-20" cy="320" r="220" fill="url(#g)" opacity="0.2"/>
+  <text x="60" y="150" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="56" fill="#e2e8f0" font-weight="700">Jody McCormick</text>
+  <text x="60" y="210" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="34" fill="#94a3b8" font-weight="500">Dotfiles • Automated Dev Environment</text>
+</svg>

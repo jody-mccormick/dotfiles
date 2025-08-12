@@ -13,7 +13,7 @@
 
 - name: "Obsidian | Clone Obsidian Git Repo"
   ansible.builtin.git:
-    repo: "{{ obsidian_repo_url | default('git@github.com:techdufus/SecondBrain.git') }}"
+    repo: "{{ obsidian_repo_url | default('git@github.com:jody-mccormick/SecondBrain.git') }}"
     dest: "{{ ansible_user_dir }}/SecondBrain"
   failed_when: false # This only really needs to be run once, ever.
 

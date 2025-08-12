@@ -7,3 +7,6 @@
 - name: "GH | MacOSX | Install gh-dash"
   ansible.builtin.command:
     cmd: gh extension install dlvhdr/gh-dash
+  register: gh_dash_install
+  changed_when: "'already installed' not in gh_dash_install.stdout | default('')"
+  failed_when: "gh_dash_install.rc != 0 and 'already installed' not in gh_dash_install.stderr | default('')"

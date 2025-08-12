@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install linters
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          python3 -m pip install --upgrade pip
+          pip3 install yamllint
+          npm install -g markdownlint-cli
+
+      - name: shellcheck
+        run: |
+          if compgen -G "bin/*" > /dev/null; then
+            shellcheck bin/* || exit 1
+          else
+            echo "No scripts in bin/, skipping shellcheck"
+          fi
+
+      - name: yamllint
+        run: |
+          yamllint -s . || (echo "Run 'pip install yamllint' locally to reproduce" && exit 1)
+
+      - name: markdownlint
+        run: |
+          markdownlint "**/*.md" --ignore node_modules || exit 1
+
+      - name: Smoke test bootstrap --help
+        run: |
+          if [ -x bin/dotfiles ]; then
+            bin/dotfiles --help || true
+          else
+            echo "bin/dotfiles not present, skip"
+          fi
