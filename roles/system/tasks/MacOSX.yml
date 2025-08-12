@@ -12,9 +12,10 @@
     - jq
 
 - name: "System | MacOSX | Enable Passwordless Sudo"
-  ansible.builtin.template:
-    src: user-sudo.j2
-    dest: /private/etc/sudoers.d/{{ ansible_env['USER'] }}
-    mode: "0440"
+  community.general.sudoers:
+    name: "{{ ansible_env['USER'] }}"
+    user: "{{ ansible_env['USER'] }}"
+    nopassword: true
+    commands: ALL
+    state: present
   become: true
-  when: not ansible_check_mode
