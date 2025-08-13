@@ -7,9 +7,9 @@ roles/neovim/files/lazy-lock.json
 *.DS_Store
 
 # Company-specific Claude commands (not for public repo)
-roles/claude/files/commands/raft/
-roles/claude/files/commands/raft-*.md
-roles/claude/files/agents/raft-*.md
+roles/claude/files/commands/omni/
+roles/claude/files/commands/omni-*.md
+roles/claude/files/agents/omni-*.md
 
 # Crush directory
 .crush/

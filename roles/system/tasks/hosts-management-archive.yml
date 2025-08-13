@@ -28,7 +28,7 @@
 # and adding them to etc-hosts after the above template is laid down.
 - name: "System | Get Host from Vault"
   ansible.builtin.command:
-    cmd: op --account my.1password.com read op://Raft/rdp-demo-local-ingress/notesPlain
+    cmd: op --account my.1password.com read op://Omni/rdp-demo-local-ingress/notesPlain
   register: rdp_demo_local_ingress_hosts
   changed_when: false
 
@@ -45,7 +45,7 @@
 # and adding them to etc-hosts after the above template is laid down.
 - name: "System | Get updm-rdp-ingress Host from Vault"
   ansible.builtin.command:
-    cmd: op --account my.1password.com read op://Raft/updm-rdp-ingress/notesPlain
+    cmd: op --account my.1password.com read op://Omni/updm-rdp-ingress/notesPlain
   register: updm_rdp_ingress_hosts
   changed_when: false
 

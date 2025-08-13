@@ -103,7 +103,7 @@ for file in $HOME/.config/zsh/*.zsh; do
   source "$file"
 done
 
-if [[ -f ~/.raftrc ]]; then source ~/.raftrc; fi
+if [[ -f ~/.omnirc ]]; then source ~/.omnirc; fi
 
 
 # Shell integrations

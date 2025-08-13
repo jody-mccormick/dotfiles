@@ -73,7 +73,7 @@ op:
 # FIXME: See `system/tasks/main.yml` for how to structure this var looping.
   # system:
   #   hosts:
-  #     - item: op://Raft/rdp-demo-local-ingress/notesPlain
+  #     - item: op://Omni/rdp-demo-local-ingress/notesPlain
   #       account: my.1password.com
 
 k8s:
